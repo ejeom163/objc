@@ -72,9 +72,10 @@ int main(int argc, const char * argv[]) {
         // insert code here...
         Fraction *myFraction;
         
-        myFraction = [Fraction alloc];
-//      myFraction = [[Fraction alloc] init]; 중복 호출 가능
+        myFraction = [Fraction alloc];  // 매쏘드 메모리 할당
         myFraction = [myFraction init];
+//      myFraction = [[Fraction alloc] init]; 중복 호출 가능
+
         
         [myFraction setNumerator:1];
         [myFraction setDenominator:3];
@@ -82,6 +83,9 @@ int main(int argc, const char * argv[]) {
 //      [myFraction setNumerator:1 withDenominator:3];  인자값 복수로 전달 예
         
         NSLog(@"The value of my Fraction is: %i/%i", [myFraction numerator], [myFraction denominator]);
+//        NSLog(@"The value of my Fraction is: %i/%i", _numerator, _denominator);
+//        @property로 선언한 변수를 사용시 언더바 _를 사용한다.
+//        [myFraction release];       // 매쏘드 메모리 해제, retain count 값으로 -1을 돌려주는 처리
     }
     return 0;
 }
