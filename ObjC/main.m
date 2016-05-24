@@ -7,12 +7,22 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Calculator.h"
 
 // Program Part
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
+        Calculator *deskCalc = [[Calculator alloc] init];
+        
+        [deskCalc setAccumulator:100.0];
+        [deskCalc add:200.];
+        [deskCalc divide:15.0];
+        [deskCalc subtract:10.0];
+        [deskCalc multiply:5];
+        NSLog(@"The result is %g", [deskCalc accumulator]);
+        
         
 //      // 4장 학습 : 4.5 정수와 부동 소수점 변환
 //        
@@ -41,7 +51,7 @@ int main(int argc, const char * argv[]) {
 //        NSLog(@"a %% c = %i", a%c);       // %% 중복은 %를 그대로 출력하기 위하여 중복하는 것임
 //        NSLog(@"a %% d = %i", a%d);       // %% 중복은 %를 그대로 출력하기 위하여 중복하는 것임
 //        NSLog(@"a / d + a %% d = %i", a/d*d+a%d);
-        
+//
 //      // 4장 학습 : 4.3 데이터 형과 표현식 - 연산자 연습 & 연산자 우선 순위
 //        int a = 25;
 //        int b = 2;
@@ -52,7 +62,7 @@ int main(int argc, const char * argv[]) {
 //        NSLog(@"a/b*b = %i", a/b*b);
 //        NSLog(@"c/d*d = %f", c/d*d);
 //        NSLog(@"-a = %i", -a);      // 단항 연산자 -는 -1을 곱한다.
-        
+//
 //      // 4장 학습 : 4.2 데이터 형과 표현식 - 연산자 연습 & 연산자 우선 순위
 //        int a = 100;
 //        int b = 2;
@@ -73,8 +83,7 @@ int main(int argc, const char * argv[]) {
 //        NSLog(@"a+b*c = %i", result);
 //        
 //        NSLog(@"a*b+c*d = %i", a*b+c*d);
-
-        
+//
 //      // 4장 학습 : 데이터 형과 표현식 - 스트링 포멧 별 출력 연습
 //        int integerVar  = 100;
 //        float floatVar = 331.79;
@@ -86,27 +95,27 @@ int main(int argc, const char * argv[]) {
 //        NSLog(@"doubleVar = %e", doubleVar);    // 부동소숫점 표현 스트링 포멧 %e 지수 형태
 //        NSLog(@"doubleVar = %g", doubleVar);    // 부동소숫점 표현 스트링 포멧 %g 지수 형태
 //        NSLog(@"charVar = %c", charVar);
-        
+//
 // 3장 학습 : 클래스 연습 Source
 //        Fraction *myFraction;
 //        myFraction = [Fraction alloc];  // 매쏘드 메모리 할당
 //        myFraction = [myFraction init];
-        // 중복 호출의 예
-        // myFraction = [[Fraction alloc] init]; 중복 호출 가능
-        
-        // id type으로 정의
-        // id myFraction = [[Fraction alloc] init];
+//      // 중복 호출의 예
+//      myFraction = [[Fraction alloc] init]; 중복 호출 가능
+//
+//      // id type으로 정의
+//      id myFraction = [[Fraction alloc] init];
 //
 //
 //        [myFraction setNumerator:1];
 //        [myFraction setDenominator:3];
-        // 인자값 복수로 전달 예
-        // [myFraction setNumerator:1 withDenominator:3];  인자값 복수로 전달 예
+//      // 인자값 복수로 전달 예
+//      [myFraction setNumerator:1 withDenominator:3];  인자값 복수로 전달 예
 //        
 //        NSLog(@"The value of my Fraction is: %i/%i", [myFraction numerator], [myFraction denominator]);
-        //
+//
 //        NSLog(@"The value of my Fraction is: %i/%i", _numerator, _denominator);
-//        @property로 선언한 변수를 사용시 언더바 _를 사용한다.
+//      // @property로 선언한 변수를 사용시 언더바 _를 사용한다.
 //       [myFraction release];       // 매쏘드 메모리 해제, retain count 값으로 -1을 돌려주는 처리
     }
     return 0;
