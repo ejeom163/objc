@@ -14,7 +14,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         // insert code here...
-        Calculator *deskCalc = [[Calculator alloc] init];
+//        Calculator *deskCalc = [[Calculator alloc] init];
         
         [deskCalc setAccumulator:100.0];
         [deskCalc add:200.];
@@ -22,7 +22,6 @@ int main(int argc, const char * argv[]) {
         [deskCalc subtract:10.0];
         [deskCalc multiply:5];
         NSLog(@"The result is %g", [deskCalc accumulator]);
-        
         
 //      // 4장 학습 : 4.5 정수와 부동 소수점 변환
 //        
